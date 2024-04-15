@@ -1,0 +1,53 @@
+[
+  {
+    "item_title": "Home",
+    "item_href": "/home",
+    "section": "home",
+    "role": "public"
+  },
+  {
+    "item_title": "About Us",
+    "item_href": "/about-us",
+    "section": "about",
+    "role": "public"
+  },
+  {
+    "item_title": "Packages",
+    "item_href": "/packages",
+    "section": "packages",
+    "role": "public"
+  },
+  {
+    "item_title": "Portfolio",
+    "item_href": "/portfolio",
+    "section": "portfolio",
+    "role": "public"
+  },
+  {
+    "item_title": "Contact",
+    "item_href": "/contact",
+    "section": "contact",
+    "role": "public"
+  },
+  {
+    "item_title": "Admin",
+    "item_href": "/admin",
+    "section": "admin",
+    "role": "admin",
+    "hasSubMenu": true,
+    "SubMenuItems": [
+      {
+        "item_title": "Common Error",
+        "item_href": "/admin/common-error",
+        "section": "common-error",
+        "role": "admin"
+      },
+      {
+        "item_title": "Tutorials",
+        "item_href": "/admin/tutorials",
+        "section": "tutorials",
+        "role": "admin"
+      }
+    ]
+  }
+]

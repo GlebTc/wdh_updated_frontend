@@ -1,0 +1,5 @@
+1. Portfolio Items
+    - portfolio_title
+    - portfolio_link
+    - portfolio_img_link
+    - portfolio_description
