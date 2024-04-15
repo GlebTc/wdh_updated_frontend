@@ -35,7 +35,7 @@
     "section": "admin",
     "role": "admin",
     "hasSubMenu": true,
-    "SubMenuItems": [
+    "SubMenuOneItems": [
       {
         "item_title": "Common Error",
         "item_href": "/admin/common-error",
@@ -46,7 +46,16 @@
         "item_title": "Tutorials",
         "item_href": "/admin/tutorials",
         "section": "tutorials",
-        "role": "admin"
+        "role": "admin",
+        "hasSubMenu": true,
+        "SubMenuTwoItems": [
+          {
+            "item_title": "Next JS",
+            "item_href": "/admin/tutorials/next-js",
+            "section": "next-js",
+            "role": "admin"
+          }
+        ]
       }
     ]
   }
