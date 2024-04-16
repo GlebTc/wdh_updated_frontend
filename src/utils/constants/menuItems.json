@@ -1,7 +1,7 @@
 [
   {
     "item_title": "Home",
-    "item_href": "/home",
+    "item_href": "/",
     "section": "home",
     "role": "public"
   },
