@@ -7,7 +7,26 @@ html {
   scroll-behavior: smooth !important;
 }
 
+.main_container {
+  @apply p-5 py-8;
+}
+
+h1 {
+  @apply text-4xl md:text-5xl font-bold text-center tracking-wide p-2 max-w-[80%] my-4;
+}
 
 h2 {
   @apply text-sm lg:text-lg xl:text-xl font-bold;
+}
+
+h3 {
+  @apply text-lg lg:text-xl font-bold;
+}
+
+p {
+  @apply text-base md:text-lg lg:text-2xl text-center tracking-wide;
+}
+
+.primary_container {
+  @apply shadow-lg shadow-gray-400 rounded-md;
 }

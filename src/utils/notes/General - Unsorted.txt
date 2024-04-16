@@ -1,0 +1,2 @@
+1. Logo Background Color - #C0D6FF
+2. Text hover - hover:text-cyan-600

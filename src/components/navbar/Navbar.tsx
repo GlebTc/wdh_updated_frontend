@@ -1,11 +1,11 @@
-import DesktopNav from "@/src/components/navbar/desktop/DesktopNav"
+import NavbarMain from '@/src/components/navbar/NavbarMain';
 
 const Navbar = () => {
   return (
     <nav>
-        <DesktopNav />
+      <NavbarMain />
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
