@@ -32,8 +32,9 @@ const About = () => {
               <a
                 href='webdevelopmenthamilton.com'
                 aria-label='webdevelopmenthamilton.com | Home Page'
+                className='hover:text-cyan-600 duration-300 cursor-pointer'
               >
-                webdevelopmenthamilton.com
+                WebDevelopmentHamilton.com
               </a>
             </strong>
             , our goal is to help you establish an online presence and gain
