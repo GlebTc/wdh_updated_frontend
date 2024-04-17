@@ -12,14 +12,14 @@ const NavbarMain = () => {
       >
         <a
           href='https://www.webdevelopmenthamilton.com'
-          className='max-w-[60px] md:max-w-[120px] relative'
+          className='max-w-[64px] md:max-w-[120px] relative'
           aria-label='Homw Link | Web Development Hamilton'
           title='Home Link | Web Development Hamilton'
         >
           <Image
             src={desktop_nav_logo}
             alt='Logo | Web Development Hamilton'
-            className='cursor-pointer rounded-lg object-contain'
+            className='cursor-pointer rounded-lg object-contain floating_container'
           />
         </a>
 
@@ -33,7 +33,7 @@ const NavbarMain = () => {
       </div>
       <a
         href='https://www.webdevelopmenthamilton.com'
-        className='w-full min-h-[20px] text-center text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-4xl font-bold hover:text-cyan-600 duration-300'
+        className='text_links'
         aria-label='Homw Link | Web Development Hamilton'
         title='Home Link | Web Development Hamilton'
       >

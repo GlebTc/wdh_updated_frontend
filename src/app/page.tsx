@@ -1,6 +1,8 @@
 import Main from '@/src/components/main/Main';
 import About from '@/src/components/main/MainAbout';
 import Portfolio from '@/src/components/main/MainPortfolio';
+import Contact from '@/src/components/main/mainContact/MainContact';
+
 
 export default function Home() {
   return (
@@ -8,6 +10,7 @@ export default function Home() {
       <Main />
       <About />
       <Portfolio />
+      <Contact />
     </main>
   );
 }
