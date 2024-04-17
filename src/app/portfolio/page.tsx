@@ -1,4 +1,4 @@
-const Portfolio = () => {
+const PortfolioPage = () => {
     const componentName = 'PORTFOLIO_PAGE_MAIN_SECTION';
     return (
       <div
@@ -9,4 +9,4 @@ const Portfolio = () => {
     )
   }
   
-  export default Portfolio
+  export default PortfolioPage

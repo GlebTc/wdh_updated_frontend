@@ -1,4 +1,4 @@
-const Blog = () => {
+const BlogPage = () => {
     const componentName = 'BLOG_PAGE_MAIN_SECTION';
     return (
       <div
@@ -9,4 +9,4 @@ const Blog = () => {
     )
   }
   
-  export default Blog
+  export default BlogPage

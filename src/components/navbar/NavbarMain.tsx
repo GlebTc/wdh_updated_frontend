@@ -6,7 +6,7 @@ import { IoMdMenu } from 'react-icons/io';
 const NavbarMain = () => {
   const componentName = 'NAVBAR_MAIN';
   return (
-    <div className={`${componentName}_MAIN_CONTAINER flex flex-col h-[fit]`}>
+    <div className={`${componentName}_MAIN_CONTAINER flex flex-col h-[fit] floating_container`}>
       <div
         className={`${componentName}_LOGO_AND_MENU_ITEMS_CONTAINER flex justify-between items-center h-full w-full p-4`}
       >
@@ -25,7 +25,7 @@ const NavbarMain = () => {
 
         <IoMdMenu
           size={60}
-          className='md:hidden rounded-xl hover:shadow-xl hover:shadow-blue-400 ease-in duration-300 cursor-pointer bg-[#C0D6FF] p-2'
+          className='md:hidden floating_container hover:shadow-xl hover:shadow-blue-400 ease-in duration-300 cursor-pointer bg-[#C0D6FF] p-2'
           title='Menu'
           aria-label='Menu'
         />

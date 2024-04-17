@@ -1,4 +1,4 @@
-const Packages = () => {
+const PackagesPage = () => {
     const componentName = 'PACKAGES_PAGE_MAIN_SECTION';
     return (
       <div
@@ -9,4 +9,4 @@ const Packages = () => {
     )
   }
   
-  export default Packages
+  export default PackagesPage

@@ -1,4 +1,4 @@
-const AboutUs = () => {
+const AboutUsPage = () => {
   const componentName = 'ABOUT_US_PAGE_MAIN_SECTION';
   return (
     <div
@@ -9,4 +9,4 @@ const AboutUs = () => {
   )
 }
 
-export default AboutUs
+export default AboutUsPage
