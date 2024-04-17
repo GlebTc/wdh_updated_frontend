@@ -1,7 +1,7 @@
 import perfect_score from '@/public/assets/perfect_score.webp';
 import Image from 'next/image';
 import { AiOutlineLink } from 'react-icons/ai';
-import BasicPackagesBullets from '@/src/components/reusable/BasicPackageBullets';
+import MainBasicPackageBullets from '@/src/components/main/MainBasicPackageBullets';
 
 const Main = () => {
   const componentName = 'MAIN_PAGE_MAIN_SECTION';
@@ -12,7 +12,7 @@ const Main = () => {
     >
       <Image
         src={perfect_score}
-        className='primary_container w-[75vw] max-w-[800px] mx-auto mb-5'
+        className='floating_container w-[75vw] max-w-[800px] mx-auto mb-5'
         quality={50}
         placeholder='blur'
         priority
@@ -31,7 +31,7 @@ const Main = () => {
         <div className='LINK_CONTAINER flex justify-center items-center '>
           <a
             href='https://pagespeed.web.dev/'
-            className='ml-2 flex items-center gap-2 border-b-2 border-blue-400 hover:text-cyan-600 duration-300'
+            className='flex items-center gap-2 border-b-2 border-blue-400 hover:text-cyan-600 duration-300'
             aria-label='Light House Page Speed Test Link | Web Development Hamilton'
             title='Light House Page Speed Test Link | Web Development Hamilton'
           >
@@ -40,7 +40,7 @@ const Main = () => {
           </a>
         </div>
       </div>
-      <BasicPackagesBullets />
+      <MainBasicPackageBullets />
     </div>
   );
 };

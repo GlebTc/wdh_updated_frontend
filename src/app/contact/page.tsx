@@ -1,4 +1,4 @@
-const Contact = () => {
+const ContactPage = () => {
     const componentName = 'CONTACT_PAGE_MAIN_SECTION';
     return (
       <div
@@ -9,4 +9,4 @@ const Contact = () => {
     )
   }
   
-  export default Contact
+  export default ContactPage

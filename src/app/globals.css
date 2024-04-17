@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 html {
-  @apply bg-blue-100 text-cyan-900;
+  @apply bg-blue-200 text-cyan-900;
   scroll-behavior: smooth !important;
 }
 
 .main_container {
-  @apply p-5 py-8;
+  @apply p-5 sm:px-12 py-8 md:py-16;
 }
 
 h1 {
@@ -27,6 +27,6 @@ p {
   @apply text-base md:text-lg lg:text-2xl text-center tracking-wide;
 }
 
-.primary_container {
+.floating_container {
   @apply shadow-lg shadow-gray-400 rounded-md;
 }
