@@ -6,8 +6,8 @@
     "role": "public"
   },
   {
-    "item_title": "About Us",
-    "item_href": "/about-us",
+    "item_title": "About",
+    "item_href": "/about",
     "section": "about",
     "role": "public"
   },
