@@ -37,17 +37,17 @@ const ContactForm = () => {
         const button = document.querySelector(
           '.submit-button'
         ) as HTMLButtonElement;
-        button.style.backgroundColor = 'green';
+        button.style.backgroundColor = '#a6e3b5';
         button.textContent = 'Message Sent';
       } else {
         console.log('FE NOT OKAY');
         const button = document.querySelector(
           '.submit-button'
         ) as HTMLButtonElement;
-        button.style.backgroundColor = 'red';
+        button.style.backgroundColor = '#e3aca6';
         button.textContent = 'Something Went Wrong';
         setTimeout(() => {
-          button.style.backgroundColor = '#06559E'; // Reset the button background color
+          button.style.backgroundColor = '#C0D6FF'; // Reset the button background color
           button.textContent = 'Try Again Please'; // Reset the button text
         }, 3000); // 3 seconds (3000 milliseconds)
       }
@@ -58,7 +58,9 @@ const ContactForm = () => {
     }
   };
   return (
-    <div className={`${componentName}_MAIN_CONTAINER floating_container p-4 w-full`}>
+    <div
+      className={`${componentName}_MAIN_CONTAINER floating_container p-4 w-full`}
+    >
       <form
         className='text-left text-sm text-scale-900 font-bold'
         onSubmit={handleSubmit}
@@ -141,7 +143,7 @@ const ContactForm = () => {
           ></textarea>
         </div>
 
-        <button className='floating_container text-sm font-bold px-4 py-2 bg-[#C0D6FF] hover:shadow-blue-500 ease-in duration-300 cursor-pointer'>
+        <button className='floating_container text-sm font-bold px-4 py-2 bg-[#C0D6FF] hover:shadow-blue-500 ease-in duration-300 cursor-pointer submit-button'>
           Send Message
         </button>
       </form>

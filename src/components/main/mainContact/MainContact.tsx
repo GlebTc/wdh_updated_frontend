@@ -1,5 +1,5 @@
-import ContactForm from './ContactForm';
-import ContactInfo from './ContactInfo';
+import ContactForm from '@/src/components/main/mainContact/ContactForm';
+import ContactInfo from '@/src/components/main/mainContact/ContactInfo';
 
 const Contact = () => {
   const componentName = 'MAIN_PAGE_CONTACT_SECTION';
