@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  @apply bg-blue-200 text-cyan-900;
+  @apply bg-blue-200 text-cyan-900 font-semibold;
   scroll-behavior: smooth !important;
 }
 
