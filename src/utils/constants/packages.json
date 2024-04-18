@@ -1,28 +1,85 @@
-{
-    "basic_services": [
-        {
-            "name": "<strong>No Upfront Fees / No Commitment</strong>"
-        },
-        {
-            "name": "Starting at just <strong><s>$300</s> $200</strong> plus tax"
-        },
-        {
-            "name": "<strong>Fast and Responsive</strong> Design"
-        },
-        {
-            "name": "Search Engine <strong>Optimization</strong>"
-        },
-        {
-            "name": "<strong>Strategic</strong> User Experience"
-        },
-        {
-            "name": "<strong>Unlimited</strong> Support"
-        },
-        {
-            "name": "<strong>Domain</strong> Registration"
-        },
-        {
-            "name": "<strong>Reliable</strong> Hosting"
-        }
+[
+  {
+    "package_name": "Basic (Up to 5 pages)",
+    "monthly": "$200/month",
+    "pulsate": true,
+    "services": [
+      {
+        "name": "<strong>No Upfront Fees / No Commitment</strong>"
+      },
+      {
+        "name": "<strong>Fast and Responsive</strong> Design"
+      },
+      {
+        "name": "Search Engine <strong>Optimization</strong> Build"
+      },
+      {
+        "name": "<strong>Strategic</strong> User Experience"
+      },
+      {
+        "name": "<strong>Unlimited</strong> Support"
+      },
+      {
+        "name": "<strong>Domain</strong> Registration"
+      },
+      {
+        "name": "<strong>Reliable</strong> Hosting"
+      }
     ]
-}
+  },
+  {
+    "package_name": "Advanced",
+    "monthly": "$400/month",
+    "services": [
+      {
+        "name": "<strong>$2,000</strong> Initial Setup"
+      },
+      {
+        "name": "<strong>Fast and Responsive</strong> Design"
+      },
+      {
+        "name": "Search Engine <strong>Optimization</strong> Build"
+      },
+      {
+        "name": "<strong>Strategic</strong> User Experience"
+      },
+      {
+        "name": "<strong>Unlimited</strong> Support"
+      },
+      {
+        "name": "<strong>Domain</strong> Registration"
+      },
+      {
+        "name": "<strong>Reliable</strong> Hosting"
+      }
+    ]
+  },
+
+  {
+    "package_name": "E-Commerce",
+    "monthly": "$1,000/month",
+    "services": [
+      {
+        "name": "<strong>$8,000</strong> Initial Setup"
+      },
+      {
+        "name": "<strong>Fast and Responsive</strong> Design"
+      },
+      {
+        "name": "Search Engine <strong>Optimization</strong> Build"
+      },
+      {
+        "name": "<strong>Strategic</strong> User Experience"
+      },
+      {
+        "name": "<strong>Unlimited</strong> Support"
+      },
+      {
+        "name": "<strong>Domain</strong> Registration"
+      },
+      {
+        "name": "<strong>Reliable</strong> Hosting"
+      }
+    ]
+  }
+]

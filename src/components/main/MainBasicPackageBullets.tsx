@@ -7,7 +7,13 @@ const MainBasicPackageBullets = () => {
     <ul
       className={`${componentName} floating_container grid lg:grid-cols-2 gap-2 p-2`}
     >
-      {packages.basic_services.map((service, index) => (
+      <li className='flex items-center gap-2'>
+        <FiArrowRightCircle />
+        <p className='text-sm sm:text-base md:text-lg lg:text-2xl'>
+        Starting at just <strong><s>$300</s> $200</strong> plus tax
+        </p>
+      </li>
+      {packages[0].services.map((service, index) => (
         <li
           key={index}
           className='flex items-center gap-2'

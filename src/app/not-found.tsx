@@ -1,12 +1,14 @@
+import MainContact from '@/src/components/main/mainContact/MainContact';
+
 export default function NotFound() {
   return (
-    <div className='h-full flex justify-center items-center flex-col gap-4 py-20 px-4 text-center'>
+    <div className='h-full flex justify-center items-center flex-col gap-4 py-10 px-4 text-center max-w-[1200px] mx-auto'>
       <h2 className='font-bold text-3xl'>
         The Page You Requested Could Not Be Found
       </h2>
       <p>
         Please check the URL and if you still experience error, please email us
-        developer at{' '}
+        at{' '}
         <a
           href='mailto:webdevelopmenthamilton@gmail.com'
           title={`Email Web Developer | webdevelopmenthamilton@gmail.com`}
@@ -24,6 +26,7 @@ export default function NotFound() {
       >
         Return Home
       </a>
+      <MainContact />
     </div>
   );
 }
