@@ -4,14 +4,14 @@
         "portfolio_item_name": "Brad Nickle CPA Professional Corporation",
         "portfolio_item_href": "https://www.bradnicklecpa.com/",
         "portfolio_item_img_name": "brad_cpa.webp",
-        "portfolio_item_category": ["professional services", "accounting"]
+        "portfolio_item_category": ["professional", "accounting"]
     },
     {
         "isOnMainPage": true,
         "portfolio_item_name": "Nakano Law Professional Corporation",
         "portfolio_item_href": "https://nakano-law.netlify.app",
         "portfolio_item_img_name": "nakano_law.webp",
-        "portfolio_item_category": ["professional services", "law"]
+        "portfolio_item_category": ["professional", "legal"]
     },
     {
         "isOnMainPage": true,
@@ -25,7 +25,7 @@
         "portfolio_item_name": "Family Chiropractic",
         "portfolio_item_href": "https://www.familychiropractic.org/",
         "portfolio_item_img_name": "family_chiropractic.webp",
-        "portfolio_item_category": ["healthcare", "chiropractic"]
+        "portfolio_item_category": ["healthcare", "chiropractic", "professional"]
     },
     {
         "isOnMainPage": true,
