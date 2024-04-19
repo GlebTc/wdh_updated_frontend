@@ -21,7 +21,8 @@ export default function NotFound() {
       <p>Error Code: 404 (Page Not Found)</p>
       <a
         href='/'
-        aria-label='Return Home'
+        aria-label='Return Home | Web Development Hamilton'
+        title='Return Home | Web Development Hamilton'
         className='text-sm font-bold px-4 py-2 rounded-md shadow-lg shadow-gray-400 bg-[#C0D6FF] hover:shadow-blue-500 ease-in duration-300 cursor-pointer'
       >
         Return Home

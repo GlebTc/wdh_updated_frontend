@@ -1,5 +1,11 @@
-import MainContact from '@/src/components/main/mainContact/MainContact';
 import WebDesignPortfolio from '@/src/app/portfolio/WebDesignPortfolio';
+
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Portfolio',
+};
+
 
 const PortfolioPage = () => {
   const componentName = 'PORTFOLIO_PAGE';

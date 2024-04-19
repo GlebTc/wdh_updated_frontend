@@ -17,7 +17,7 @@ const About = () => {
             src='https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80'
             width={400}
             height={400}
-            alt='About Us | Web Designer | Web Developer | Web Development Hamilton'
+            alt='About | Web Development Hamilton'
           />
         </div>
         <div className={`${componentName}_TEXT_CONTAINER md:w-2/3 lg:px-16 self-center`}>
@@ -32,6 +32,7 @@ const About = () => {
               <a
                 href='webdevelopmenthamilton.com'
                 aria-label='webdevelopmenthamilton.com | Home Page'
+                title='webdevelopmenthamilton.com | Home Page'
                 className='hover:text-cyan-600 duration-300 cursor-pointer'
               >
                 WebDevelopmentHamilton.com

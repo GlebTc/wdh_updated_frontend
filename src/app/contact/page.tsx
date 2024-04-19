@@ -1,6 +1,13 @@
 import ContactForm from "@/src/components/main/mainContact/ContactForm";
 import ContactInfo from "@/src/components/main/mainContact/ContactInfo";
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact',
+};
+
+
 const ContactPage = () => {
   const componentName = 'CONTACT_PAGE_MAIN_SECTION';
   return (
