@@ -37,5 +37,5 @@ h3 {
 }
 
 p {
-  @apply text-base md:text-lg lg:text-2xl text-center tracking-wide;
+  @apply text-base md:text-lg lg:text-2xl text-justify tracking-wide;
 }

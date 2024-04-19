@@ -27,8 +27,8 @@ const Technology = () => {
       <Image
         src={technology}
         alt='Portrait of Web Developer'
-        width={300}
-        height={400}
+        width={240}
+        height={360}
         className='floating_container'
       />
     </div>

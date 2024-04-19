@@ -12,7 +12,7 @@ const Main = () => {
     >
       <Image
         src={perfect_score}
-        className='floating_container w-[75vw] max-w-[800px] mx-auto mb-5'
+        className='floating_container w-[75vw] max-w-[800px] mx-auto'
         quality={50}
         placeholder='blur'
         priority
