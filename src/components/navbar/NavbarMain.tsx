@@ -13,7 +13,7 @@ const NavbarMain = () => {
         <a
           href='https://www.webdevelopmenthamilton.com'
           className='max-w-[64px] md:max-w-[120px] relative'
-          aria-label='Homw Link | Web Development Hamilton'
+          aria-label='Home Link | Web Development Hamilton'
           title='Home Link | Web Development Hamilton'
         >
           <Image
@@ -26,15 +26,15 @@ const NavbarMain = () => {
         <IoMdMenu
           size={60}
           className='md:hidden floating_container hover:shadow-xl hover:shadow-blue-400 ease-in duration-300 cursor-pointer bg-[#C0D6FF] p-2'
-          title='Menu'
-          aria-label='Menu'
+          title='Menu | Web Development Hamilton'
+          aria-label='Menu | Web Development Hamilton'
         />
         <DesktopNavMenu />
       </div>
       <a
         href='https://www.webdevelopmenthamilton.com'
         className='text_links'
-        aria-label='Homw Link | Web Development Hamilton'
+        aria-label='Home Link | Web Development Hamilton'
         title='Home Link | Web Development Hamilton'
       >
         www.WebDevelopmentHamilton.com

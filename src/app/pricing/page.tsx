@@ -1,6 +1,13 @@
 import PackagesContainer from './PackagesContainer';
 import packages from '@/src/utils/constants/packages.json';
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Pricing',
+};
+
+
 const PricingPage = () => {
   const componentName = 'PRICING_PAGE_MAIN_SECTION';
   return (

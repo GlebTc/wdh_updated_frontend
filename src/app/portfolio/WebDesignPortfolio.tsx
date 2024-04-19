@@ -52,10 +52,11 @@ const WebDesignPortfolio = () => {
               <a
                 href={`${item.portfolio_item_href}`}
                 aria-label={`Web Development Hamilton Portfolio Item | ${item.portfolio_item_name}`}
+                title={`Web Development Hamilton Portfolio Item | ${item.portfolio_item_name}`}
               >
                 <Image
                   src={src + item.portfolio_item_img_name}
-                  alt={item.portfolio_item_name}
+                  alt={`Web Development Hamilton Portfolio Item Image | ${item.portfolio_item_name}`}
                   width={600}
                   height={400}
                   className='rounded-md group-hover:opacity-10 transition duration-300'

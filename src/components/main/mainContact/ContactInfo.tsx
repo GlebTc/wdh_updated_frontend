@@ -17,10 +17,13 @@ const ContactInfo = () => {
       <div
         className={`${componentName}_MESSAGE_CONTAINER px-4 flex flex-col items-center gap-4`}
       >
-        <h3 className='text-wrap text-center'>We will respond within 24 hours</h3>
+        <h3 className='text-wrap text-center'>
+          We will respond within 24 hours
+        </h3>
         <a
           href='tel:9057304227'
-          aria-label='(905) 730-4227'
+          aria-label='Phone | (905) 730-4227 | Web Development Hamilton'
+          title='Phone | (905) 730-4227 | Web Development Hamilton'
           className='text_links sm:text-base'
         >
           (905) 730-4227
@@ -28,6 +31,7 @@ const ContactInfo = () => {
         <a
           href='mailto:webdevelopmenthamilton@gmail.com'
           aria-label='Email | webdevelopmenthamilton@gmail.com | Web Development Hamilton'
+          title='Email | webdevelopmenthamilton@gmail.com | Web Development Hamilton'
           className='text_links sm:text-base'
         >
           webdevelopmenthamilton@gmail.com
@@ -39,24 +43,9 @@ const ContactInfo = () => {
       >
         <li className='bg-[#C0D6FF] rounded-full shadow-xl shadow-gray-400 p-3 cursor-pointer hover:shadow-blue-400 hover:scale-105 ease-in duration-300'>
           <a
-            href='https://www.linkedin.com/company/webdevelopmenthamilton/'
-            aria-label='Linked In | Web Development Hamilton'
-          >
-            <FaLinkedin size={30} />
-          </a>
-        </li>
-        <li className='bg-[#C0D6FF] rounded-full shadow-xl shadow-gray-400 p-3 cursor-pointer hover:shadow-blue-400 hover:scale-105 ease-in duration-300'>
-          <a
-            href='https://github.com/GlebTc'
-            aria-label='Git Hub | Web Development Hamilton'
-          >
-            <FaGithub size={30} />
-          </a>
-        </li>
-        <li className='bg-[#C0D6FF] rounded-full shadow-xl shadow-gray-400 p-3 cursor-pointer hover:shadow-blue-400 hover:scale-105 ease-in duration-300'>
-          <a
             href='mailto:webdevelopmenthamilton@gmail.com'
             aria-label='Email | webdevelopmenthamilton@gmail.com | Web Development Hamilton'
+            title='Email | webdevelopmenthamilton@gmail.com | Web Development Hamilton'
           >
             <AiOutlineMail size={30} />
           </a>
@@ -64,25 +53,47 @@ const ContactInfo = () => {
         <li className='bg-[#C0D6FF] rounded-full shadow-xl shadow-gray-400 p-3 cursor-pointer hover:shadow-blue-400 hover:scale-105 ease-in duration-300'>
           <a
             href='tel:9057304227'
-            aria-label='(905) 730-4227'
+            aria-label='Phone | (905) 730-4227 | Web Development Hamilton'
+            title='Phone | (905) 730-4227 | Web Development Hamilton'
           >
             <FaPhone size={30} />
           </a>
         </li>
         <li className='bg-[#C0D6FF] rounded-full shadow-xl shadow-gray-400 p-3 cursor-pointer hover:shadow-blue-400 hover:scale-105 ease-in duration-300'>
           <a
+            href='https://wa.me/19057304227'
+            aria-label='Whats App | Web Development Hamilton'
+            title='Whats App | Web Development Hamilton'
+          >
+            <FaWhatsapp size={30} />
+          </a>
+        </li>
+        <li className='bg-[#C0D6FF] rounded-full shadow-xl shadow-gray-400 p-3 cursor-pointer hover:shadow-blue-400 hover:scale-105 ease-in duration-300 hidden lg:block'>
+          <a
             href='https://www.facebook.com/people/Web-Development-Hamilton/61551493012736/'
             aria-label='Facebook | Web Development Hamilton'
+            title='Facebook | Web Development Hamilton'
           >
             <FaFacebook size={30} />
           </a>
         </li>
-        <li className='bg-[#C0D6FF] rounded-full shadow-xl shadow-gray-400 p-3 cursor-pointer hover:shadow-blue-400 hover:scale-105 ease-in duration-300'>
+
+        <li className='bg-[#C0D6FF] rounded-full shadow-xl shadow-gray-400 p-3 cursor-pointer hover:shadow-blue-400 hover:scale-105 ease-in duration-300 hidden lg:block'>
           <a
-            href='https://wa.me/19057304227'
-            aria-label='Whats App | Web Development Hamilton'
+            href='https://www.linkedin.com/company/webdevelopmenthamilton/'
+            aria-label='Linked In | Web Development Hamilton'
+            title='Linked In | Web Development Hamilton'
           >
-            <FaWhatsapp size={30} />
+            <FaLinkedin size={30} />
+          </a>
+        </li>
+        <li className='bg-[#C0D6FF] rounded-full shadow-xl shadow-gray-400 p-3 cursor-pointer hover:shadow-blue-400 hover:scale-105 ease-in duration-300 hidden lg:block'>
+          <a
+            href='https://github.com/GlebTc'
+            aria-label='Git Hub | Web Development Hamilton'
+            title='Git Hub | Web Development Hamilton'
+          >
+            <FaGithub size={30} />
           </a>
         </li>
       </ul>

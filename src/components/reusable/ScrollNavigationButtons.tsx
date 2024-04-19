@@ -22,7 +22,8 @@ const ScrollNavigationButtons = () => {
     <div className={`${isFixed ? 'fixed' : 'hidden'} bottom-4 right-4 flex flex-col gap-2 z-[20]`}>
       <a
         href='tel:9057304227'
-        aria-label='(905) 730-4227'
+        aria-label='Phone | (905) 730-4227 | Web Development Hamilton'
+        title='Phone | (905) 730-4227 | Web Development Hamilton'
         className={`bg-[#C0D6FF] rounded-full shadow-xl shadow-gray-400 p-3 cursor-pointer hover:shadow-blue-400 hover:scale-105 ease-in duration-300`}
       >
         <FaPhone size={25} />
@@ -30,14 +31,15 @@ const ScrollNavigationButtons = () => {
       <a
         href='mailto:webdevelopmenthamilton@gmail.com'
         aria-label='Email | webdevelopmenthamilton@gmail.com | Web Development Hamilton'
+        title='Email | webdevelopmenthamilton@gmail.com | Web Development Hamilton'
         className={`bg-[#C0D6FF] rounded-full shadow-xl shadow-gray-400 p-3 cursor-pointer hover:shadow-blue-400 hover:scale-105 ease-in duration-300`}
       >
         <AiOutlineMail size={25} />
       </a>
       <a
         href='#'
-        title={`Navigate back to Home Page | Web Development Hamilton`}
-        aria-label={`Navigate back to Home Page | Web Development Hamilton`}
+        title={`Navigate back to Top | Web Development Hamilton`}
+        aria-label={`Navigate back to Top | Web Development Hamilton`}
         className={`bg-[#C0D6FF] rounded-full shadow-xl shadow-gray-400 p-3 cursor-pointer hover:shadow-blue-400 hover:scale-105 ease-in duration-300]`}
       >
         <FaAnglesUp size={25} />
