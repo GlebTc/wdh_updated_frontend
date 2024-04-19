@@ -13,7 +13,7 @@ const ContactInfo = () => {
     <div
       className={`${componentName}_MAIN_CONTAINER floating_container p-8 w-full flex flex-col justify-start items-center gap-2`}
     >
-      <h3 className='my-5 border-b-2 border-cyan-900'>Direct Contact</h3>
+      <h2 className='my-5 border-b-2 border-cyan-900'>Direct Contact</h2>
       <div
         className={`${componentName}_MESSAGE_CONTAINER px-4 flex flex-col items-center gap-4`}
       >
@@ -37,7 +37,7 @@ const ContactInfo = () => {
           webdevelopmenthamilton@gmail.com
         </a>
       </div>
-      <h3 className='my-5 border-b-2 border-cyan-900'>Social Media</h3>
+      <h2 className='my-5 border-b-2 border-cyan-900'>Social Media</h2>
       <ul
         className={`${componentName}_SOCIAL_MEDIA_CONTAINER w-full flex items-center justify-around flex-wrap gap-4 px-8`}
       >
