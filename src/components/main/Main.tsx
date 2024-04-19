@@ -27,7 +27,7 @@ const Main = () => {
         scores as close to perfect as possible.
       </p>
       <div className='PAGESPEED_LINK mb-5 flex flex-col items-center'>
-        <h3>Test Your Website</h3>
+        <h2>Test Your Website</h2>
         <div className='LINK_CONTAINER flex justify-center items-center '>
           <a
             href='https://pagespeed.web.dev/'

@@ -1,12 +1,22 @@
+'use client';
+import { useState } from 'react';
 import DesktopNavMenu from '@/src/components/navbar/desktop/DesktopNavMenu';
 import desktop_nav_logo from '@/public/assets/wdh_logo.png';
 import Image from 'next/image';
 import { IoMdMenu } from 'react-icons/io';
+import MobileNavMenu from './mobile/MobileNavMenu';
 
 const NavbarMain = () => {
   const componentName = 'NAVBAR_MAIN';
+  const [mobileMenu, setMobileMenu] = useState(false);
+
+  const handleMobileMenu = () => {
+    setMobileMenu(!mobileMenu);
+  };
   return (
-    <div className={`${componentName}_MAIN_CONTAINER flex flex-col h-[fit] floating_container`}>
+    <div
+      className={`${componentName}_MAIN_CONTAINER flex flex-col h-[fit] floating_container`}
+    >
       <div
         className={`${componentName}_LOGO_AND_MENU_ITEMS_CONTAINER flex justify-between items-center h-full w-full p-4`}
       >
@@ -25,9 +35,10 @@ const NavbarMain = () => {
 
         <IoMdMenu
           size={60}
-          className='md:hidden floating_container hover:shadow-xl hover:shadow-blue-400 ease-in duration-300 cursor-pointer bg-[#C0D6FF] p-2'
+          className='sticky md:hidden floating_container hover:shadow-xl hover:shadow-blue-400 ease-in duration-300 cursor-pointer bg-[#C0D6FF] p-2'
           title='Menu | Web Development Hamilton'
           aria-label='Menu | Web Development Hamilton'
+          onClick={handleMobileMenu}
         />
         <DesktopNavMenu />
       </div>
@@ -39,6 +50,10 @@ const NavbarMain = () => {
       >
         www.WebDevelopmentHamilton.com
       </a>
+      <MobileNavMenu
+        mobileMenu={mobileMenu}
+        handleMobileMenu={handleMobileMenu}
+      />
     </div>
   );
 };
