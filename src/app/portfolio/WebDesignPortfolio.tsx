@@ -7,12 +7,13 @@ const WebDesignPortfolio = () => {
   const componentName = 'WEB_DESIGN_PORTFOLIO';
   const src = '/assets/portfolio_items/';
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [showAllItems, setShowAllItems] = useState<boolean>(true);
 
   // Extract all unique categories from portfolioItems
   const allCategoriesArray = portfolioItems
-    .map(item => item.portfolio_item_category)
+    .map((item) => item.portfolio_item_category)
     .reduce((categories, categoryArray) => {
-      categoryArray.forEach(category => {
+      categoryArray.forEach((category) => {
         if (!categories.includes(category)) {
           categories.push(category);
         }
@@ -22,19 +23,49 @@ const WebDesignPortfolio = () => {
 
   // Filter portfolio items based on selected category
   const filteredItems = selectedCategory
-    ? portfolioItems.filter(item => item.portfolio_item_category.includes(selectedCategory))
+    ? portfolioItems.filter((item) =>
+        item.portfolio_item_category.includes(selectedCategory)
+      )
     : portfolioItems;
+
+  const handleCategorySelection = (category: string) => {
+    setSelectedCategory(category);
+    setShowAllItems(false);
+  };
+
+  const handleShowAllItems = () => {
+    setSelectedCategory(null);
+    setShowAllItems(true);
+  };
 
   return (
     <div className={`${componentName}_MAIN_CONTAINER`}>
       <div className={`${componentName}_CATEGORY_SELECTION_CONTAINER`}>
         <h2 className='mb-4'>Categories</h2>
-        <ul className={`${componentName}_CATEGORIES_LIST_CONTAINER flex flex-wrap gap-2 justify-center mb-8`}>
+        {!showAllItems && (
+          <ul
+            className={`${componentName}_CATEGORIES_LIST_CONTAINER flex flex-wrap gap-2 justify-center mb-8`}
+          >
+            <li
+              className={`floating_container text-sm font-bold px-4 py-2 bg-[#C0D6FF] hover:shadow-blue-500 ease-in duration-300 cursor-pointer w-fit uppercase ${
+                showAllItems ? 'bg-[#5651e5] text-white' : ''
+              }`}
+              onClick={handleShowAllItems}
+            >
+              Show All ({portfolioItems.length})
+            </li>
+          </ul>
+        )}
+        <ul
+          className={`${componentName}_CATEGORIES_LIST_CONTAINER flex flex-wrap gap-2 justify-center mb-8`}
+        >
           {allCategoriesArray.map((category, index) => (
             <li
               key={index}
-              className={`floating_container text-sm font-bold px-4 py-2 bg-[#C0D6FF] hover:shadow-blue-500 ease-in duration-300 cursor-pointer w-fit uppercase ${selectedCategory === category ? 'bg-[#5651e5] text-white' : ''}`}
-              onClick={() => setSelectedCategory(category === selectedCategory ? null : category)}
+              className={`floating_container text-sm font-bold px-4 py-2 bg-[#C0D6FF] hover:shadow-blue-500 ease-in duration-300 cursor-pointer w-fit uppercase ${
+                selectedCategory === category ? 'bg-[#5651e5] text-white' : ''
+              }`}
+              onClick={() => handleCategorySelection(category)}
             >
               {category}
             </li>
@@ -76,4 +107,3 @@ const WebDesignPortfolio = () => {
 };
 
 export default WebDesignPortfolio;
-
