@@ -11,7 +11,7 @@
         "portfolio_item_name": "Nakano Law Professional Corporation",
         "portfolio_item_href": "https://nakano-law.netlify.app",
         "portfolio_item_img_name": "nakano_law.webp",
-        "portfolio_item_category": ["professional", "legal"]
+        "portfolio_item_category": ["professional", "law"]
     },
     {
         "isOnMainPage": true,
@@ -25,20 +25,34 @@
         "portfolio_item_name": "Family Chiropractic",
         "portfolio_item_href": "https://www.familychiropractic.org/",
         "portfolio_item_img_name": "family_chiropractic.webp",
-        "portfolio_item_category": ["healthcare", "chiropractic", "professional"]
+        "portfolio_item_category": ["professional", "healthcare", "chiropractic"]
     },
     {
         "isOnMainPage": true,
         "portfolio_item_name": "DJ Mags",
         "portfolio_item_href": "https://djmagsofficial.netlify.app/",
         "portfolio_item_img_name": "djmags.webp",
-        "portfolio_item_category": ["entertainment", "music"]
+        "portfolio_item_category": ["music", "entertainment", "services"]
     },
     {
         "isOnMainPage": true,
         "portfolio_item_name": "Michael Nickle Racing",
         "portfolio_item_href": "https://www.michaelnickleracing.com",
         "portfolio_item_img_name": "michael_nickle_racing.webp",
-        "portfolio_item_category": ["sports", "racing", "hobby"]
+        "portfolio_item_category": ["racing", "sports"]
+    },
+    {
+        "isOnMainPage": false,
+        "portfolio_item_name": "Dr Hair Code",
+        "portfolio_item_href": "https://www.drhaircode.ca/",
+        "portfolio_item_img_name": "dr_hair_code.webp",
+        "portfolio_item_category": ["hair", "professional", "services"]
+    },
+    {
+        "isOnMainPage": false,
+        "portfolio_item_name": "MDS Mechanical Inc",
+        "portfolio_item_href": "https://www.mdsmechanical.ca/",
+        "portfolio_item_img_name": "mds_mechanical_inc.webp",
+        "portfolio_item_category": ["mechanical", "services"]
     }
 ]
