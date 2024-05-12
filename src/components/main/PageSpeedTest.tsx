@@ -1,7 +1,8 @@
 'use client';
 import { useState } from 'react';
 
-const RunSpeedTest = () => {
+const PageSpeedTest = () => {
+  const componentName = 'PAGESPEED_TEST';
   const [url, setUrl] = useState('');
   const [testing, setTesting] = useState(false);
   const [testResult, setTestResult] = useState<number | null>(null);
@@ -63,7 +64,7 @@ const RunSpeedTest = () => {
     <div className='flex flex-col justify-center items-center gap-4'>
       {testResult && (
         <div className='text-center'>
-          <p className='text-center text-3xl'>
+          <p className='text-center text-3xl mb-4'>
             Performance Score:{' '}
             <span
               className={`${
@@ -81,15 +82,19 @@ const RunSpeedTest = () => {
             <div className='flex'>
               <p className='text-xs'>
                 * The test is performed using{' '}
-                <a href='https://pagespeed.web.dev/' className='links underline'>
+                <a
+                  href='https://pagespeed.web.dev/'
+                  className='font-bold hover:text-cyan-600 duration-300 underline'
+                >
                   Google Developer PageSpeed Test
                 </a>
+                {' '}tool.
               </p>
             </div>
             <div className='flex'>
               <p className='text-xs'>
                 * Results may vary on your current internet connection as well
-                as device capacity
+                as device capacity.
               </p>
             </div>
           </div>
@@ -105,7 +110,7 @@ const RunSpeedTest = () => {
 
         <button
           onClick={runSpeedTest}
-          className='text-sm font-bold px-4 py-2 rounded-md shadow-lg shadow-gray-400 bg-[#C0D6FF] hover:shadow-blue-500 ease-in duration-300 cursor-pointer'
+          className='font-bold px-4 py-2 floating_container bg-[#C0D6FF] hover:shadow-blue-500 ease-in duration-300 cursor-pointer '
         >
           <p>Test Performance</p>
         </button>
@@ -116,4 +121,4 @@ const RunSpeedTest = () => {
   );
 };
 
-export default RunSpeedTest;
+export default PageSpeedTest;

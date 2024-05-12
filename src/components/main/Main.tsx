@@ -1,8 +1,7 @@
 import perfect_score from '@/public/assets/perfect_score.webp';
 import Image from 'next/image';
-import { AiOutlineLink } from 'react-icons/ai';
 import MainBasicPackageBullets from '@/src/components/main/MainBasicPackageBullets';
-import RunSpeedTest from '@/src/components/main/RunSpeedTest';
+import PageSpeedTest from '@/src/components/main/PageSpeedTest';
 
 const Main = () => {
   const componentName = 'MAIN_PAGE_MAIN_SECTION';
@@ -30,7 +29,7 @@ const Main = () => {
       <div className='PAGESPEED_LINK mb-5 flex flex-col items-center'>
         <h2 className='mb-4'>Test Your Website</h2>
 
-        <RunSpeedTest />
+        <PageSpeedTest />
       </div>
       <MainBasicPackageBullets />
     </div>
