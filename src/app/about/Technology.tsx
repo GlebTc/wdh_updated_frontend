@@ -5,13 +5,22 @@ const Technology = () => {
   const componentName = 'ABOUT_PAGE_TECHNOLOGY_SECTION';
   return (
     <div
-      className={`${componentName}_MAIN_CONTAINER h-full flex justify-center items-center flex-col md:flex-row-reverse gap-4 px-4 text-center`}
+      className={`${componentName}_MAIN_CONTAINER flex justify-between items-center flex-col md:flex-row`}
     >
-      <div className={`${componentName}_CONTENT_SECTION`}>
+      <div className={`${componentName}_IMAGE_CONTAINER relative h-80 w-60`}>
+        <Image
+          src={technology}
+          alt='Web Development Hamilton | Technology Image'
+          fill
+          sizes='1'
+          className='object-cover floating_container'
+        />
+      </div>
+      <div className={`${componentName}_TEXT_CONTAINER md:max-w-[80%]`}>
         <h2 className='text-2xl font-bold my-4 border-b-2 border-cyan-900 w-[80%] md:w-[60%] mx-auto'>
           My Tech Stack
         </h2>
-        <p className='md:px-12'>
+        <p className='md:pl-12'>
           When I first began coding, I focused heavily on the basics of the most
           popular front end technologies: HTML, CSS, and JavaScript. I have
           quickly switched to learning React JS and it wasn't long before I felt
@@ -24,13 +33,6 @@ const Technology = () => {
           (frontend and backend) and Tailwind CSS.
         </p>
       </div>
-      <Image
-        src={technology}
-        alt='Portrait of Web Developer'
-        width={240}
-        height={360}
-        className='floating_container'
-      />
     </div>
   );
 };

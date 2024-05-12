@@ -6,22 +6,23 @@ const AboutMe = () => {
   const currentYear = new Date().getFullYear();
   const yearsOfExperience = currentYear - 2021;
   return (
-    <div
-      className={`${componentName}_MAIN_CONTAINER h-full flex justify-center items-center flex-col md:flex-row-reverse gap-4 px-4 text-centey mb-8 md:mb-20`}
-    >
-      <Image
-        src={portrait}
-        alt='Portrait of Web Developer'
-        width={200}
-        height={300}
-        className='floating_container'
-      />
-
-      <div className={`${componentName}_CONTENT_SECTION`}>
+    <div className={`${componentName}_MAIN_CONTAINER flex justify-between items-center flex-col md:flex-row-reverse`}>
+      <div
+        className={`${componentName}_IMAGE_CONTAINER relative h-80 w-60`}
+      >
+        <Image
+          src={portrait}
+          alt='Web Development Hamilton | Portrait of Web Developer'
+          fill
+          sizes='1'
+          className='object-cover floating_container'
+        />
+      </div>
+      <div className={`${componentName}_TEXT_CONTAINER md:max-w-[80%]`}>
         <h2 className='text-2xl font-bold my-4 border-b-2 border-cyan-900 w-[80%] md:w-[60%] mx-auto'>
           A Little About Me
         </h2>
-        <p className='md:px-12'>
+        <p className='md:pr-12'>
           Hello, my name is Gleb. I am a software developer with a passion for
           creating websites and web applications with over {yearsOfExperience}{' '}
           years of experience. I have started this journey because I wanted to
@@ -29,7 +30,7 @@ const AboutMe = () => {
           the process of creating websites and web applications. For the past{' '}
           {yearsOfExperience} years I have embarked on a journey that started
           with the classic "Hello World" to building modern, responsive, and
-          accessible website and full stack applications using the latest
+          accessible websites and full stack applications using the latest
           technologies. Let's talk about technologies I use and why I use them.
         </p>
       </div>
