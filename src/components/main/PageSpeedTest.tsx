@@ -32,7 +32,6 @@ const PageSpeedTest = () => {
     fetch(testUrl)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         const score = Math.round(
           data.lighthouseResult.categories.performance.score * 100
         );
@@ -68,7 +67,7 @@ const PageSpeedTest = () => {
               <p>Testing Performance</p>
             </div>
           </div>
-          <p className='text-xs'>May take up to a minute</p>
+          <p className='text-xs'>This test may take up to a minute</p>
         </button>
       </div>
     );
@@ -93,11 +92,7 @@ const PageSpeedTest = () => {
                 {testResult}
               </span>
             </p>
-            <p className='mb-4'>
-              www.
-              {testResultData &&
-                testResultData?.lighthouseResult?.entities[0]?.name}
-            </p>
+            <p className='mb-4'>{testResultData && testResultData?.id}</p>
             <div className='px-[24] mb-8'>
               <div>
                 <p className='text-xs'>
@@ -132,9 +127,9 @@ const PageSpeedTest = () => {
 
         <button
           onClick={runSpeedTest}
-          className='font-bold px-4 py-2 floating_container bg-[#C0D6FF] hover:shadow-blue-500 ease-in duration-300 cursor-pointer '
+          className='font-bold px-4 py-2 floating_container bg-[#C0D6FF] hover:shadow-blue-500 hover:text-cyan-600 ease-in duration-300 cursor-pointer'
         >
-          <p>Test Performance</p>
+          <p className='text-center'>Test Performance</p>
         </button>
       </div>
 
