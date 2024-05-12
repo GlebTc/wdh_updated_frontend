@@ -1,6 +1,6 @@
 import MainContact from '@/src/components/main/mainContact/MainContact';
 import { Metadata } from 'next';
-import RunSpeedTest from '../../components/main/RunSpeedTest';
+import RunSpeedTest from '../../components/main/PageSpeedTest';
 
 export const metadata: Metadata = {
   title: 'Blog',
