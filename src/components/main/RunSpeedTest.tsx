@@ -77,10 +77,22 @@ const RunSpeedTest = () => {
               {testResult}
             </span>
           </p>
-          <p className='text-xs'>
-            Results may vary on your current internet connection as well as
-            device capacity
-          </p>
+          <div>
+            <div className='flex'>
+              <p className='text-xs'>
+                * The test is performed using{' '}
+                <a href='https://pagespeed.web.dev/' className='links underline'>
+                  Google Developer PageSpeed Test
+                </a>
+              </p>
+            </div>
+            <div className='flex'>
+              <p className='text-xs'>
+                * Results may vary on your current internet connection as well
+                as device capacity
+              </p>
+            </div>
+          </div>
         </div>
       )}
       <div className='flex flex-col justify-center gap-2 md:flex-row md:gap-8'>
