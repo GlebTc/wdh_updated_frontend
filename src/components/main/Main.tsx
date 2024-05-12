@@ -2,6 +2,7 @@ import perfect_score from '@/public/assets/perfect_score.webp';
 import Image from 'next/image';
 import { AiOutlineLink } from 'react-icons/ai';
 import MainBasicPackageBullets from '@/src/components/main/MainBasicPackageBullets';
+import RunSpeedTest from '@/src/app/blog/RunSpeedTest';
 
 const Main = () => {
   const componentName = 'MAIN_PAGE_MAIN_SECTION';
@@ -27,18 +28,9 @@ const Main = () => {
         scores as close to perfect as possible.
       </p>
       <div className='PAGESPEED_LINK mb-5 flex flex-col items-center'>
-        <h2>Test Your Website</h2>
-        <div className='LINK_CONTAINER flex justify-center items-center '>
-          <a
-            href='https://pagespeed.web.dev/'
-            className='flex items-center gap-2 border-b-2 border-blue-400 hover:text-cyan-600 duration-300'
-            aria-label='Light House Page Speed Test Link | Web Development Hamilton'
-            title='Light House Page Speed Test Link | Web Development Hamilton'
-          >
-            <AiOutlineLink />
-            <p>Page Speed</p>
-          </a>
-        </div>
+        <h2 className='mb-4'>Test Your Website</h2>
+
+        <RunSpeedTest />
       </div>
       <MainBasicPackageBullets />
     </div>

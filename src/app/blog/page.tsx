@@ -1,5 +1,6 @@
 import MainContact from '@/src/components/main/mainContact/MainContact';
 import { Metadata } from 'next';
+import RunSpeedTest from './RunSpeedTest';
 
 export const metadata: Metadata = {
   title: 'Blog',
@@ -7,6 +8,7 @@ export const metadata: Metadata = {
 
 const BlogPage = () => {
   const componentName = 'BLOG_PAGE_MAIN_SECTION';
+
   return (
     <div
       className={`${componentName}_MAIN_CONTAINER h-full flex justify-center items-center flex-col gap-4 py-10 px-4 text-center max-w-[1200px] mx-auto`}
