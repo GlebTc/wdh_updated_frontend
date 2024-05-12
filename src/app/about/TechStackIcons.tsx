@@ -1,6 +1,6 @@
 const TechStackIcons = () => {
   return (
-    <div className='flex gap-4 flex-wrap justify-center mb-8 md:mb-20'>
+    <div className='flex gap-4 flex-wrap justify-center my-8 md:my-20 sm:mx-12'>
       <img
         alt='Badge | HTML'
         width='100px'

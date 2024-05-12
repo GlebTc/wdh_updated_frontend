@@ -1,15 +1,24 @@
 'use client';
 import { useState } from 'react';
+import Image from 'next/image';
+import portrait from '@/public/assets/portrait.webp';
 
 const PageSpeedTest = () => {
   const componentName = 'PAGESPEED_TEST';
   const [url, setUrl] = useState('');
   const [testing, setTesting] = useState(false);
   const [testResult, setTestResult] = useState<number | null>(null);
+  const [testResultData, setTestResultData] = useState<any | null>(null);
   const [error, setError] = useState(null);
 
   const handleChange = (e: any) => {
     setUrl(e.target.value);
+  };
+
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      runSpeedTest();
+    }
   };
 
   const runSpeedTest = () => {
@@ -17,15 +26,20 @@ const PageSpeedTest = () => {
     setTestResult(null);
     setError(null);
 
-    const testUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://${url}`;
+    const modifiedUrl = url.replace('https://', '').replace('http://', '');
+
+    const testUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://${modifiedUrl}&strategy=mobile&category=performance`;
     fetch(testUrl)
       .then((response) => response.json())
       .then((data) => {
+        console.log(data);
         const score = Math.round(
           data.lighthouseResult.categories.performance.score * 100
         );
+        setTestResultData(data);
         setTestResult(score);
       })
+
       .catch((error) => {
         console.error(error);
       })
@@ -61,41 +75,48 @@ const PageSpeedTest = () => {
   }
 
   return (
-    <div className='flex flex-col justify-center items-center gap-4'>
+    <div>
       {testResult && (
-        <div className='text-center'>
-          <p className='text-center text-3xl mb-4'>
-            Performance Score:{' '}
-            <span
-              className={`${
-                testResult > 80
-                  ? 'text-green-600'
-                  : testResult > 50
-                  ? 'text-yellow-600'
-                  : 'text-red-600'
-              }`}
-            >
-              {testResult}
-            </span>
-          </p>
-          <div>
-            <div className='flex'>
-              <p className='text-xs'>
-                * The test is performed using{' '}
-                <a
-                  href='https://pagespeed.web.dev/'
-                  className='font-bold hover:text-cyan-600 duration-300 underline'
-                >
-                  Google Developer PageSpeed Test
-                </a>
-                {' '}tool.
-              </p>
-            </div>
-            <div className='flex'>
-              <p className='text-xs'>
-                * Results may vary on your current internet connection as well
-                as device capacity.
-              </p>
+        <div className='flex flex-col justify-center items-center gap-4'>
+          <div className='text-center w-full flex flex-col justify-center items-center'>
+            <p className='text-center text-3xl'>
+              Performance Score:{' '}
+              <span
+                className={`${
+                  testResult > 80
+                    ? 'text-green-600'
+                    : testResult > 50
+                    ? 'text-yellow-600'
+                    : 'text-red-600'
+                }`}
+              >
+                {testResult}
+              </span>
+            </p>
+            <p className='mb-4'>
+              www.
+              {testResultData &&
+                testResultData?.lighthouseResult?.entities[0]?.name}
+            </p>
+            <div className='px-[24] mb-8'>
+              <div>
+                <p className='text-xs'>
+                  * The test is performed using{' '}
+                  <a
+                    href='https://pagespeed.web.dev/'
+                    className='font-bold hover:text-cyan-600 duration-300 underline'
+                  >
+                    Google Developer PageSpeed Test
+                  </a>{' '}
+                  tool.
+                </p>
+              </div>
+              <div className='flex'>
+                <p className='text-xs'>
+                  * Results may vary on your current internet connection as well
+                  as device capacity.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -106,6 +127,7 @@ const PageSpeedTest = () => {
           placeholder={`${testResult ? 'Re-test' : 'Enter URL to Test'}`}
           className='border border-gray-300 rounded-md p-2'
           onChange={handleChange}
+          onKeyUp={handleKeyPress}
         />
 
         <button
