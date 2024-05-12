@@ -2,7 +2,7 @@ import perfect_score from '@/public/assets/perfect_score.webp';
 import Image from 'next/image';
 import { AiOutlineLink } from 'react-icons/ai';
 import MainBasicPackageBullets from '@/src/components/main/MainBasicPackageBullets';
-import RunSpeedTest from '@/src/app/blog/RunSpeedTest';
+import RunSpeedTest from '@/src/components/main/RunSpeedTest';
 
 const Main = () => {
   const componentName = 'MAIN_PAGE_MAIN_SECTION';
