@@ -10,7 +10,7 @@ const MainBasicPackageBullets = () => {
       <li className='flex items-center gap-2'>
         <FiArrowRightCircle />
         <p className='text-sm sm:text-base md:text-lg lg:text-2xl'>
-        Starting at just <strong><s>$300</s> $200</strong> plus tax
+        Starting at <strong><s>$300</s> $200 / month</strong> plus tax
         </p>
       </li>
       {packages[0].services.map((service, index) => (
