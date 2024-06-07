@@ -23,7 +23,8 @@ const NameserverChangeGoDaddy = () => {
             <li>dns4.p08.nsone.net</li>
           </ul>
         </li>
-        <li>Click Continue. The nameserver change will take around 24 hours to propagate through the internet.</li>
+        <li>Click Save.</li>
+        <li>The nameserver change will take around 24 hours to propagate through the internet.</li>
       </ul>
     </div>
   );
