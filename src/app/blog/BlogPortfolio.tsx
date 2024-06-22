@@ -1,17 +1,17 @@
 'use client';
 import { useState } from 'react';
-import portfolioItems from '@/src/utils/constants/portfolioItems.json';
+import blogPosts from '@/src/utils/constants/blogPosts.json';
 import Image from 'next/image';
 
-const WebDesignPortfolio = () => {
-  const componentName = 'WEB_DESIGN_PORTFOLIO';
-  const src = '/assets/portfolio_items/';
+const BlogPortfolio = () => {
+  const componentName = 'BLOG_PAGE_MAIN_SECTION';
+  const src = '/assets/blog_items/';
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [showAllItems, setShowAllItems] = useState<boolean>(true);
 
   // Extract all unique categories from portfolioItems
-  const allCategoriesArray = portfolioItems
-    .map((item) => item.portfolio_item_category)
+  const allCategoriesArray = blogPosts
+    .map((item) => item.blog_post_category)
     .reduce((categories, categoryArray) => {
       categoryArray.forEach((category) => {
         if (!categories.includes(category)) {
@@ -23,10 +23,10 @@ const WebDesignPortfolio = () => {
 
   // Filter portfolio items based on selected category
   const filteredItems = selectedCategory
-    ? portfolioItems.filter((item) =>
-        item.portfolio_item_category.includes(selectedCategory)
+    ? blogPosts.filter((item) =>
+        item.blog_post_category.includes(selectedCategory)
       )
-    : portfolioItems;
+    : blogPosts;
 
   const handleCategorySelection = (category: string) => {
     setSelectedCategory(category);
@@ -52,7 +52,7 @@ const WebDesignPortfolio = () => {
               }`}
               onClick={handleShowAllItems}
             >
-              Show All ({portfolioItems.length})
+              Show All ({blogPosts.length})
             </li>
           </ul>
         )}
@@ -78,23 +78,23 @@ const WebDesignPortfolio = () => {
           {filteredItems.map((item, index) => (
             <li
               key={index}
-              className='relative flex flex-col justify-center h-auto floating_container group hover:bg-gradient-to-r from-[#5651e5] to-[#709dff] cursor-pointer transition duration-300 sm:max-w-[45%] lg:max-w-[30%]'
+              className='relative flex flex-col justify-center h-auto floating_container group bg-gradient-to-r from-[#5651e5] to-[#709dff] cursor-pointer transition duration-300 sm:max-w-[45%] lg:max-w-[30%]'
             >
               <a
-                href={`${item.portfolio_item_href}`}
-                aria-label={`Web Development Hamilton Portfolio Item | ${item.portfolio_item_name}`}
-                title={`Web Development Hamilton Portfolio Item | ${item.portfolio_item_name}`}
+                href={`/blog/${item.blog_post_url}`}
+                aria-label={`Web Development Hamilton Portfolio Item | ${item.title}`}
+                title={`Web Development Hamilton Portfolio Item | ${item.title}`}
               >
                 <Image
-                  src={src + item.portfolio_item_img_name}
-                  alt={`Web Development Hamilton Portfolio Item Image | ${item.portfolio_item_name}`}
+                  src={src + item.imageURL}
+                  alt={`Web Development Hamilton Portfolio Item Image | ${item.title}`}
                   width={600}
                   height={400}
-                  className='rounded-md group-hover:opacity-10 transition duration-300'
+                  className='rounded-md group-hover:opacity-100 opacity-60 transition duration-300'
                 />
-                <div className='hidden group-hover:flex flex-col justify-center items-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] transition duration-300'>
+                <div className='flex flex-col justify-center items-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] transition duration-300'>
                   <h3 className='text-white mb-4 text-center transition duration-300'>
-                    {item.portfolio_item_name}
+                    {item.title}
                   </h3>
                 </div>
               </a>
@@ -106,4 +106,4 @@ const WebDesignPortfolio = () => {
   );
 };
 
-export default WebDesignPortfolio;
+export default BlogPortfolio;
