@@ -61,5 +61,12 @@
     "portfolio_item_href": "https://lobby-restaurant.netlify.app/",
     "portfolio_item_img_name": "lobby.webp",
     "portfolio_item_category": ["entertainment", "services"]
+  },
+  {
+    "isOnMainPage": false,
+    "portfolio_item_name": "Avante Salon & Spa",
+    "portfolio_item_href": "https://avantesalonspa.ca/",
+    "portfolio_item_img_name": "avante_salon_spa.webp",
+    "portfolio_item_category": ["professional", "services"]
   }
 ]

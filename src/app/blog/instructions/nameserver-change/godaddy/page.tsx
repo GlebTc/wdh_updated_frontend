@@ -4,7 +4,7 @@ const NameserverChangeGoDaddy = () => {
   const componentName = 'NAMESERVER_CHANGE';
   return (
     <div
-      className={`${componentName}_MAIN_CONTAINER h-full flex justify-center items-center flex-col gap-4 pt-4 px-4 text-center max-w-[1300px] mx-auto`}
+      className={`${componentName}_MAIN_CONTAINER h-full flex justify-center items-center flex-col gap-4 pt-4 px-4 text-center max-w-[100px] mx-auto`}
     >
       <h1>Name Server Change - Go Daddy</h1>
       <ul className="text-left list-decimal">
