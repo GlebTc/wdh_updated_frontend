@@ -4,6 +4,7 @@ import Image from 'next/image';
 const Portfolio = () => {
   const componentName = 'MAIN_PAGE_PORTFOLIO_SECTION';
   const src = '/assets/portfolio_items/';
+
   return (
     <div
       id='portfolio'
@@ -11,10 +12,10 @@ const Portfolio = () => {
     >
       <h1>Our Clients</h1>
       <ul className='grid md:grid-cols-2 gap-8'>
-        {portfolioItems.map((item, index) => (
+        {portfolioItems.filter(item => item.isOnMainPage).map((item, index) => (
           <li
             key={index}
-            className=' relative flex flex-col justify-center h-auto w-fit floating_container group hover:bg-gradient-to-r from-[#5651e5] to-[#709dff] cursor-pointer transition duration-300'
+            className='relative flex flex-col justify-center h-auto w-fit floating_container group hover:bg-gradient-to-r from-[#5651e5] to-[#709dff] cursor-pointer transition duration-300'
           >
             <a
               href={`${item.portfolio_item_href}`}

@@ -78,7 +78,7 @@ const WebDesignPortfolio = () => {
           {filteredItems.map((item, index) => (
             <li
               key={index}
-              className='relative flex flex-col justify-center h-auto floating_container group hover:bg-gradient-to-r from-[#5651e5] to-[#709dff] cursor-pointer transition duration-300 max-w-[80dvw] md:max-w-[45dvw] lg:max-w-[35dvw] xl:max-w-[25dvw]'
+              className='relative flex flex-col justify-center h-auto floating_container group hover:bg-gradient-to-r from-[#5651e5] to-[#709dff] cursor-pointer transition duration-300 sm:max-w-[45%] lg:max-w-[30%]'
             >
               <a
                 href={`${item.portfolio_item_href}`}
