@@ -30,7 +30,7 @@ const About = () => {
             At{' '}
             <strong>
               <a
-                href='webdevelopmenthamilton.com'
+                href='/'
                 aria-label='webdevelopmenthamilton.com | Home Page'
                 title='webdevelopmenthamilton.com | Home Page'
                 className='hover:text-cyan-600 duration-300 cursor-pointer'

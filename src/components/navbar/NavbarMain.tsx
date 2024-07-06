@@ -21,7 +21,7 @@ const NavbarMain = () => {
         className={`${componentName}_LOGO_AND_MENU_ITEMS_CONTAINER flex justify-between items-center h-full w-full p-4`}
       >
         <a
-          href='https://www.webdevelopmenthamilton.com'
+          href='/'
           className='max-w-[64px] md:max-w-[120px] relative'
           aria-label='Home Link | Web Development Hamilton'
           title='Home Link | Web Development Hamilton'
@@ -43,7 +43,7 @@ const NavbarMain = () => {
         <DesktopNavMenu />
       </div>
       <a
-        href='https://www.webdevelopmenthamilton.com'
+        href='/'
         className='text_links'
         aria-label='Home Link | Web Development Hamilton'
         title='Home Link | Web Development Hamilton'

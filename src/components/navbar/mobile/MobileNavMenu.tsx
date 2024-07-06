@@ -44,7 +44,7 @@ const MobileNavMenu = ({
           className={`${componentName}_LOGO_AND_CLOSE_BUTTON_CONTAINER flex justify-between items-center h-fit w-full p-4`}
         >
           <a
-            href='https://www.webdevelopmenthamilton.com'
+            href='/'
             className='max-w-[64px] md:max-w-[120px] relative'
             aria-label='Home Link | Web Development Hamilton'
             title='Home Link | Web Development Hamilton'
