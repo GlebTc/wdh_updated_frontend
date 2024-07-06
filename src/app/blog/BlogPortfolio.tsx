@@ -90,10 +90,10 @@ const BlogPortfolio = () => {
                   alt={`Web Development Hamilton Portfolio Item Image | ${item.title}`}
                   width={600}
                   height={400}
-                  className='rounded-md group-hover:opacity-100 opacity-60 transition duration-300'
+                  className='rounded-md group-hover:opacity-100 opacity-80 transition duration-300'
                 />
-                <div className='flex flex-col justify-center items-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] transition duration-300'>
-                  <h3 className='text-white mb-4 text-center transition duration-300'>
+                <div className='flex flex-col justify-center items-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] transition duration-300 bg-gray-700/95 rounded-lg p-4 group-hover:bg-gray-700/20'>
+                  <h3 className='text-white mb-4 text-center transition duration-300 text-3xl'>
                     {item.title}
                   </h3>
                 </div>
