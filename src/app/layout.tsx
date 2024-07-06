@@ -22,6 +22,7 @@ export const metadata: Metadata = {
   keywords: [
     'Web Development Hamilton',
     'Web Design Hamilton',
+    "Website Design Hamilton",
     'SEO Hamilton',
     'Website Development',
     'Digital Marketing Hamilton',
@@ -40,6 +41,7 @@ export const metadata: Metadata = {
     'Hamilton Business Web Design',
     'Business Website Development',
     'Small Business Online Presence',
+    "web designer in hamilton",
   ],
   creator: 'Web Development Hamilton | www.webdevelopmenthamilton.com',
   publisher: 'Web Development Hamilton | www.webdevelopmenthamilton.com',

@@ -5,7 +5,7 @@ const BlogPosts = (blog: any) => {
   const componentName = 'BLOG_POSTS';
   return (
     <div className='flex flex-col gap-4 justify-center items-center py-8'>
-      <h3 className='w-full text-left md:text-4xl'>{blog.blog.title}</h3>
+      <h1 className=''>{blog.blog.title}</h1>
       <div
         className={`${componentName}_IMAGE_CONTAINER relative h-[25dvh] w-[90dvw] md:h-[35dvh] lg:h-[45dvh] xl:h-[50dvh] my-4`}
       >
