@@ -14,7 +14,7 @@ const BlogPosts = (blog: any) => {
           alt={blog.blog.title}
           fill
           sizes='100'
-          className='object-cover floating_container'
+          className='object-cover floating_container lg:max-w-[65%] mx-auto'
         />
       </div>
       <div

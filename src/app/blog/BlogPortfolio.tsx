@@ -77,7 +77,7 @@ const BlogPortfolio = () => {
           {filteredItems.map((item, index) => (
             <li
               key={index}
-              className='relative flex flex-col justify-center h-auto floating_container group bg-gradient-to-r from-[#5651e5] to-[#709dff] cursor-pointer transition duration-300 sm:max-w-[45%] lg:max-w-[30%]'
+              className='relative flex flex-col justify-center h-auto floating_container group bg-gradient-to-r from-[#5651e5] to-[#709dff] cursor-pointer transition duration-300 sm:max-w-[45%] lg:max-w-[30%] min-h-[35dvh]'
             >
               <a
                 href={`/blog/${item.blog_post_url}`}
