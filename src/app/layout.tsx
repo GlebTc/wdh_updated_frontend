@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import Head from 'next/head';
 import './globals.css';
 import Navbar from '../components/navbar/Navbar';
 
@@ -54,17 +55,36 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Web Development Hamilton",
+    "url": "https://www.webdevelopmenthamilton.com/",
+    "logo": "https://www.webdevelopmenthamilton.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-905-730-4227",
+      "contactType": "Customer Service"
+    },
+    "sameAs": [
+      "https://www.facebook.com/webdevelopmenthamilton",
+      "https://www.linkedin.com/company/webdevelopmenthamilton",
+      "https://www.instagram.com/webdevelopmenthamilton"
+    ]
+  };
+
   return (
-    <html lang='en'>
+    <html lang="en">
+      <Head>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+      </Head>
       <body className={inter.className}>
         <Navbar />
         {children}
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

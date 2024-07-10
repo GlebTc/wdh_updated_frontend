@@ -73,7 +73,6 @@ const BlogPortfolio = () => {
         </ul>
       </div>
       <div className={`${componentName}_PORTFOLIO_DISPLAY`}>
-        {/* I had added flex and flex wrap and then each container is set to max width based on screen size */}
         <ul className={`flex flex-wrap justify-center gap-4`}>
           {filteredItems.map((item, index) => (
             <li
@@ -92,7 +91,8 @@ const BlogPortfolio = () => {
                   height={400}
                   className='rounded-md group-hover:opacity-100 opacity-80 transition duration-300'
                 />
-                <div className='flex flex-col justify-center items-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] transition duration-300 bg-gray-700/95 rounded-lg p-4 group-hover:bg-gray-700/20'>
+                <div className='absolute top-0 left-0 w-full h-full bg-black opacity-50 group-hover:opacity-0 transition-opacity duration-500'></div>
+                <div className='flex flex-col justify-center items-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] transition-opacity duration-500 opacity-100 group-hover:opacity-0'>
                   <h3 className='text-white mb-4 text-center transition duration-300 text-3xl'>
                     {item.title}
                   </h3>
