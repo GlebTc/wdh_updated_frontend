@@ -31,7 +31,7 @@ const ContactForm = () => {
     // Check if the token is valid
     if (!cloudFlareToken) {
       console.log('FE - Cloudflare token is missing');
-      alert('Please complete the reCAPTCHA challenge');
+      alert('Please veryfiy you are not a robot');
       return;
     }
 
