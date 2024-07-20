@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { ContactFormProps } from '@/src/utils/types/types';
+import Script from 'next/script';
 
 const ContactForm = () => {
   const componentName = 'CONTACT_FORM';
@@ -24,6 +25,17 @@ const ContactForm = () => {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    const cloudFlareData = new FormData(event.target as HTMLFormElement);
+    const cloudFlareToken = cloudFlareData.get('cf-turnstile-token');
+
+    // Check if the token is valid
+    if (!cloudFlareToken) {
+      console.log('FE - Cloudflare token is missing');
+      alert('Please complete the reCAPTCHA challenge');
+      return;
+    }
+
+
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -33,22 +45,22 @@ const ContactForm = () => {
         body: JSON.stringify(formData),
       });
       if (response.ok) {
-        console.log('FE OKAY');
+        console.log('FE - Message sent successfully');
         const button = document.querySelector(
           '.submit-button'
         ) as HTMLButtonElement;
         button.style.backgroundColor = '#a6e3b5';
         button.textContent = 'Message Sent';
       } else {
-        console.log('FE NOT OKAY');
+        console.log('FE - Message failed to send');
         const button = document.querySelector(
           '.submit-button'
         ) as HTMLButtonElement;
         button.style.backgroundColor = '#e3aca6';
-        button.textContent = 'Something Went Wrong';
+        button.textContent = 'Something went wrong, please try again';
         setTimeout(() => {
           button.style.backgroundColor = '#C0D6FF'; // Reset the button background color
-          button.textContent = 'Try Again Please'; // Reset the button text
+          button.textContent = 'Try Again'; // Reset the button text
         }, 3000); // 3 seconds (3000 milliseconds)
       }
     } catch {
@@ -61,6 +73,10 @@ const ContactForm = () => {
     <div
       className={`${componentName}_MAIN_CONTAINER floating_container p-4 w-full`}
     >
+      <Script
+        src='https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback'
+        defer
+      ></Script>
       <form
         className='text-left text-sm text-scale-900 font-bold'
         onSubmit={handleSubmit}
@@ -142,7 +158,11 @@ const ContactForm = () => {
             onChange={handleChange}
           ></textarea>
         </div>
-
+        {/* Cloudflare reCAPTCHA */}
+        <div
+          className='cf-turnstile'
+          data-sitekey={`${process.env.NEXT_PUBLIC_CLOUDFLARE_SITE_KEY}`}
+        ></div>
         <button className='floating_container text-sm font-bold px-4 py-2 bg-[#C0D6FF] hover:shadow-blue-500 ease-in duration-300 cursor-pointer submit-button'>
           Send Message
         </button>
