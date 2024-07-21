@@ -3,38 +3,38 @@ import BlogPosts from '@/src/app/blog/BlogPosts';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Search Engine Optimization aka SEO | Web Development Hamilton',
+  title: 'Why We Use Next.js for Web Development | Web Development Hamilton',
   description:
-    'Learn about the intricacies of Search Engine Optimization (SEO) from Web Development Hamilton. Discover why SEO is essential and how we plan to incorporate it into our future services.',
+    'Discover why Web Development Hamilton leverages Next.js for building fast, scalable, and SEO-friendly websites. Learn about the benefits of server-side rendering, static site generation, and optimized performance.',
   keywords: [
-    'SEO',
-    'Search Engine Optimization',
-    'Technical SEO',
-    'SEO Strategies',
-    'Web Development Hamilton SEO',
-    'SEO Tips',
-    'SEO Techniques',
-    'Organic Search Traffic',
-    'Improving Search Rankings',
-    'SEO Best Practices',
+    'Next.js',
+    'Web Development',
+    'Performance',
+    'Server-Side Rendering',
+    'Static Site Generation',
+    'SEO-Friendly Websites',
+    'Optimized Performance',
+    'Web Development Hamilton',
+    'React Framework',
+    'Scalable Web Applications',
   ],
   openGraph: {
-    title: 'Search Engine Optimization aka SEO | Web Development Hamilton',
+    title: 'Why We Use Next.js for Web Development | Web Development Hamilton',
     description:
-      'Learn about the intricacies of Search Engine Optimization (SEO) from Web Development Hamilton. Discover why SEO is essential and how we plan to incorporate it into our future services.',
-    url: 'https://www.webdevelopmenthamilton.com/blog/seo',
+      'Discover why Web Development Hamilton leverages Next.js for building fast, scalable, and SEO-friendly websites. Learn about the benefits of server-side rendering, static site generation, and optimized performance.',
+    url: 'https://www.webdevelopmenthamilton.com/blog/next-js',
     type: 'article',
   },
   twitter: {
-    title: 'Search Engine Optimization aka SEO | Web Development Hamilton',
+    title: 'Why We Use Next.js for Web Development | Web Development Hamilton',
     card: 'summary_large_image',
     description:
-      'Learn about the intricacies of Search Engine Optimization (SEO) from Web Development Hamilton. Discover why SEO is essential and how we plan to incorporate it into our future services.',
+      'Discover why Web Development Hamilton leverages Next.js for building fast, scalable, and SEO-friendly websites. Learn about the benefits of server-side rendering, static site generation, and optimized performance.',
   },
 };
 
 const NextJS = () => {
-  const componentName = 'BLOG_POCT_NEXTJS';
+  const componentName = 'BLOG_POST_NEXTJS';
   return (
     <div
       className={`${componentName}_MAIN_CONTAINER h-full flex justify-center items-center flex-col gap-4 py-10 px-4 text-center max-w-[1200px] mx-auto`}

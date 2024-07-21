@@ -3,38 +3,38 @@ import BlogPosts from '@/src/app/blog/BlogPosts';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Search Engine Optimization aka SEO | Web Development Hamilton',
+  title: 'Call-to-Action Buttons | Web Development Hamilton',
   description:
-    'Learn about the intricacies of Search Engine Optimization (SEO) from Web Development Hamilton. Discover why SEO is essential and how we plan to incorporate it into our future services.',
+    'Learn about the importance of Call-to-Action (CTA) buttons in web design and development. Discover best practices for creating effective CTAs that drive user actions and improve conversion rates.',
   keywords: [
-    'SEO',
-    'Search Engine Optimization',
-    'Technical SEO',
-    'SEO Strategies',
-    'Web Development Hamilton SEO',
-    'SEO Tips',
-    'SEO Techniques',
-    'Organic Search Traffic',
-    'Improving Search Rankings',
-    'SEO Best Practices',
+    'Call-to-Action Buttons',
+    'CTA',
+    'Web Design',
+    'User Experience',
+    'UX Design',
+    'Web Development',
+    'Conversion Rate Optimization',
+    'Web Development Hamilton',
+    'Effective CTAs',
+    'Button Design',
   ],
   openGraph: {
-    title: 'Search Engine Optimization aka SEO | Web Development Hamilton',
+    title: 'Call-to-Action Buttons | Web Development Hamilton',
     description:
-      'Learn about the intricacies of Search Engine Optimization (SEO) from Web Development Hamilton. Discover why SEO is essential and how we plan to incorporate it into our future services.',
-    url: 'https://www.webdevelopmenthamilton.com/blog/seo',
+      'Learn about the importance of Call-to-Action (CTA) buttons in web design and development. Discover best practices for creating effective CTAs that drive user actions and improve conversion rates.',
+    url: 'https://www.webdevelopmenthamilton.com/blog/call-to-action-buttons',
     type: 'article',
   },
   twitter: {
-    title: 'Search Engine Optimization aka SEO | Web Development Hamilton',
+    title: 'Call-to-Action Buttons | Web Development Hamilton',
     card: 'summary_large_image',
     description:
-      'Learn about the intricacies of Search Engine Optimization (SEO) from Web Development Hamilton. Discover why SEO is essential and how we plan to incorporate it into our future services.',
+      'Learn about the importance of Call-to-Action (CTA) buttons in web design and development. Discover best practices for creating effective CTAs that drive user actions and improve conversion rates.',
   },
 };
 
 const CTA = () => {
-  const componentName = 'BLOG_POCT_NEXTJS';
+  const componentName = 'BLOG_POST_CTA';
   return (
     <div
       className={`${componentName}_MAIN_CONTAINER h-full flex justify-center items-center flex-col gap-4 py-10 px-4 text-center max-w-[1200px] mx-auto`}
