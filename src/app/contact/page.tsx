@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 };
 
 const ContactPage = () => {
-  const componentName = 'CONTACT_PAGE_MAIN_SECTION';
+  const componentName = 'CONTACT_PAGE';
   return (
     <div
       className={`${componentName}_MAIN_CONTAINER flex flex-col justify-center items-center gap-2 max-w-[1200px] mx-auto`}

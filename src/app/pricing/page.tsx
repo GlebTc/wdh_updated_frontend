@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 };
 
 const PricingPage = () => {
-  const componentName = 'PRICING_PAGE_MAIN_SECTION';
+  const componentName = 'PRICING_PAGE';
   return (
     <div
       className={`${componentName}_MAIN_CONTAINER flex flex-col gap-4 items-center py-4 px-4 max-w-[1400px] mx-auto`}

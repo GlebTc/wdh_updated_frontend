@@ -158,7 +158,7 @@ const ContactForm = () => {
             onChange={handleChange}
           ></textarea>
         </div>
-        {/* Cloudflare reCAPTCHA */}
+        {/* Cloudflare CAPTCHA */}
         <div
           className='cf-turnstile'
           data-sitekey={`${process.env.NEXT_PUBLIC_CLOUDFLARE_SITE_KEY}`}

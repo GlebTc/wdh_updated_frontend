@@ -16,7 +16,7 @@ const Main = () => {
         quality={50}
         placeholder='blur'
         priority
-        alt='Perfect Score | Web Development Hamilton | webdevelopmenthamilton.com'
+        alt='Perfect Score | Web Development Hamilton | http://www.webdevelopmenthamilton.com'
       />
       <h1>Website Development</h1>
 

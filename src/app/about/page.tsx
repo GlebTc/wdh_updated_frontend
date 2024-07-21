@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 };
 
 const AboutPage = () => {
-  const componentName = 'ABOUT_US_PAGE_MAIN_SECTION';
+  const componentName = 'ABOUT_US_PAGE';
   return (
     <div
       className={`${componentName}_MAIN_CONTAINER h-full flex justify-center items-center flex-col gap-4 pt-4 px-4 text-center max-w-[1300px] mx-auto`}
