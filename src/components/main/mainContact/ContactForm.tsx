@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { ContactFormProps } from '@/src/utils/types/types';
 import Script from 'next/script';
 
@@ -7,13 +7,14 @@ declare global {
   interface Window {
     turnstile: {
       render: (selector: string, options: { sitekey: string }) => void;
-      reset: (widgetId: string) => void;
+      reset: (widgetId?: string) => void;
     };
   }
 }
 
 const ContactForm = () => {
   const componentName = 'CONTACT_FORM';
+  const turnstileRendered = useRef(false);
   const [formData, setFormData] = useState<ContactFormProps>({
     name: '',
     phone: 0,
@@ -34,6 +35,11 @@ const ContactForm = () => {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    // Reset the CAPTCHA before checking the token
+    if (typeof window !== 'undefined' && window.turnstile) {
+      window.turnstile.reset();
+    }
+
     const cloudFlareData = new FormData(event.target as HTMLFormElement);
     const cloudFlareToken = cloudFlareData.get('cf-turnstile-token');
 
@@ -79,12 +85,13 @@ const ContactForm = () => {
   };
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && window.turnstile) {
+    if (typeof window !== 'undefined' && window.turnstile && !turnstileRendered.current) {
       const captchaElement = document.querySelector('.cf-turnstile');
-      if (captchaElement && !captchaElement.hasChildNodes()) {
+      if (captchaElement) {
         window.turnstile.render('.cf-turnstile', {
           sitekey: process.env.NEXT_PUBLIC_CLOUDFLARE_SITE_KEY!,
         });
+        turnstileRendered.current = true;
       }
     }
   }, []);
