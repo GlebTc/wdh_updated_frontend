@@ -7,6 +7,7 @@ declare global {
   interface Window {
     turnstile: {
       render: (selector: string, options: { sitekey: string }) => void;
+      reset: (widgetId: string) => void;
     };
   }
 }
@@ -79,9 +80,12 @@ const ContactForm = () => {
 
   useEffect(() => {
     if (typeof window !== 'undefined' && window.turnstile) {
-      window.turnstile.render('.cf-turnstile', {
-        sitekey: process.env.NEXT_PUBLIC_CLOUDFLARE_SITE_KEY!,
-      });
+      const captchaElement = document.querySelector('.cf-turnstile');
+      if (captchaElement && !captchaElement.hasChildNodes()) {
+        window.turnstile.render('.cf-turnstile', {
+          sitekey: process.env.NEXT_PUBLIC_CLOUDFLARE_SITE_KEY!,
+        });
+      }
     }
   }, []);
 
@@ -91,13 +95,6 @@ const ContactForm = () => {
         src='https://challenges.cloudflare.com/turnstile/v0/api.js'
         async
         defer
-        onLoad={() => {
-          if (typeof window !== 'undefined' && window.turnstile) {
-            window.turnstile.render('.cf-turnstile', {
-              sitekey: process.env.NEXT_PUBLIC_CLOUDFLARE_SITE_KEY!,
-            });
-          }
-        }}
       />
       <form
         className='text-left text-sm text-scale-900 font-bold'
