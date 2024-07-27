@@ -1,7 +1,15 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ContactFormProps } from '@/src/utils/types/types';
 import Script from 'next/script';
+
+declare global {
+  interface Window {
+    turnstile: {
+      render: (selector: string, options: { sitekey: string }) => void;
+    };
+  }
+}
 
 const ContactForm = () => {
   const componentName = 'CONTACT_FORM';
@@ -31,10 +39,9 @@ const ContactForm = () => {
     // Check if the token is valid
     if (!cloudFlareToken) {
       console.log('FE - Cloudflare token is missing');
-      alert('Please veryfiy you are not a robot');
+      alert('Please verify you are not a robot');
       return;
     }
-
 
     try {
       const response = await fetch('/api/contact', {
@@ -69,24 +76,36 @@ const ContactForm = () => {
       );
     }
   };
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.turnstile) {
+      window.turnstile.render('.cf-turnstile', {
+        sitekey: process.env.NEXT_PUBLIC_CLOUDFLARE_SITE_KEY!,
+      });
+    }
+  }, []);
+
   return (
-    <div
-      className={`${componentName}_MAIN_CONTAINER floating_container p-4 w-full`}
-    >
+    <div className={`${componentName}_MAIN_CONTAINER floating_container p-4 w-full`}>
       <Script
-        src='https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback'
+        src='https://challenges.cloudflare.com/turnstile/v0/api.js'
+        async
         defer
-      ></Script>
+        onLoad={() => {
+          if (typeof window !== 'undefined' && window.turnstile) {
+            window.turnstile.render('.cf-turnstile', {
+              sitekey: process.env.NEXT_PUBLIC_CLOUDFLARE_SITE_KEY!,
+            });
+          }
+        }}
+      />
       <form
         className='text-left text-sm text-scale-900 font-bold'
         onSubmit={handleSubmit}
       >
         <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
           <div className='flex flex-col'>
-            <label
-              className='uppercase text-sm py-2'
-              htmlFor='name'
-            >
+            <label className='uppercase text-sm py-2' htmlFor='name'>
               Name
             </label>
             <input
@@ -98,10 +117,7 @@ const ContactForm = () => {
             />
           </div>
           <div className='flex flex-col'>
-            <label
-              className='uppercase text-sm py-2'
-              htmlFor='phone'
-            >
+            <label className='uppercase text-sm py-2' htmlFor='phone'>
               Phone Number
             </label>
             <input
@@ -114,10 +130,7 @@ const ContactForm = () => {
           </div>
         </div>
         <div className='flex flex-col py-2'>
-          <label
-            className='uppercase text-sm py-2'
-            htmlFor='email'
-          >
+          <label className='uppercase text-sm py-2' htmlFor='email'>
             Email
           </label>
           <input
@@ -130,10 +143,7 @@ const ContactForm = () => {
           />
         </div>
         <div className='flex flex-col py-2'>
-          <label
-            className='uppercase text-sm py-2'
-            htmlFor='subject'
-          >
+          <label className='uppercase text-sm py-2' htmlFor='subject'>
             Subject
           </label>
           <input
@@ -145,10 +155,7 @@ const ContactForm = () => {
           />
         </div>
         <div className='flex flex-col py-2'>
-          <label
-            className='uppercase text-sm py-2'
-            htmlFor='message'
-          >
+          <label className='uppercase text-sm py-2' htmlFor='message'>
             Message
           </label>
           <textarea
@@ -161,7 +168,7 @@ const ContactForm = () => {
         {/* Cloudflare CAPTCHA */}
         <div
           className='cf-turnstile'
-          data-sitekey={`${process.env.NEXT_PUBLIC_CLOUDFLARE_SITE_KEY}`}
+          data-sitekey={process.env.NEXT_PUBLIC_CLOUDFLARE_SITE_KEY}
         ></div>
         <button className='floating_container text-sm font-bold px-4 py-2 bg-[#C0D6FF] hover:shadow-blue-500 ease-in duration-300 cursor-pointer submit-button'>
           Send Message
