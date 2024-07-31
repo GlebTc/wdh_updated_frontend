@@ -1,11 +1,13 @@
-import DesktopNav from "@/src/components/navbar/desktop/DesktopNav"
+import NavbarMain from '@/src/components/navbar/NavbarMain';
+import ScrollNavigationButtons from '@/src/components/reusable/ScrollNavigationButtons';
 
 const Navbar = () => {
   return (
     <nav>
-        <DesktopNav />
+      <NavbarMain />
+      <ScrollNavigationButtons />
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

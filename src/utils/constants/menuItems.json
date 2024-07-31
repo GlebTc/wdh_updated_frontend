@@ -1,20 +1,20 @@
 [
   {
     "item_title": "Home",
-    "item_href": "/home",
+    "item_href": "/",
     "section": "home",
     "role": "public"
   },
   {
-    "item_title": "About Us",
-    "item_href": "/about-us",
+    "item_title": "About",
+    "item_href": "/about",
     "section": "about",
     "role": "public"
   },
   {
-    "item_title": "Packages",
-    "item_href": "/packages",
-    "section": "packages",
+    "item_title": "Pricing",
+    "item_href": "/pricing",
+    "section": "pricing",
     "role": "public"
   },
   {
@@ -30,24 +30,9 @@
     "role": "public"
   },
   {
-    "item_title": "Admin",
-    "item_href": "/admin",
-    "section": "admin",
-    "role": "admin",
-    "hasSubMenu": true,
-    "SubMenuItems": [
-      {
-        "item_title": "Common Error",
-        "item_href": "/admin/common-error",
-        "section": "common-error",
-        "role": "admin"
-      },
-      {
-        "item_title": "Tutorials",
-        "item_href": "/admin/tutorials",
-        "section": "tutorials",
-        "role": "admin"
-      }
-    ]
+    "item_title": "Blog",
+    "item_href": "/blog",
+    "section": "blog",
+    "role": "public"
   }
 ]
